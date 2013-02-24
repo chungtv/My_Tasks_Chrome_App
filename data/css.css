@@ -1,0 +1,190 @@
+/* CSS from 'Simple Task Manager' by @humphreybc : https://github.com/humphreybc/super-simple-tasks */
+
+[data-icon]:before {
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-pencil:before,
+.icon-star:before,
+.icon-pencil:before {
+  content: "\21";
+}
+.icon-star:before {
+  content: "\22";
+}
+.icon-history:before {
+  content: "\23";
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  padding: 10px;
+}
+input,
+button,
+textarea {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+}
+.wrapper {
+  margin: 0px auto;
+  width: 450px;
+}
+.content {
+  margin: 20px auto 20px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 2px 3px #ddd;
+  box-shadow: 0px 2px 3px #ddd;
+  min-height: 500px;
+  background-color: #f7f6f5;
+}
+.header {
+  padding: 20px;
+  -webkit-box-shadow: inset 0px 1px 0px #fff, 0px 1px 0px #fff;
+  box-shadow: inset 0px 1px 0px #fff, 0px 1px 0px #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7f6f5), color-stop(1, #eee));
+  background-image: -webkit-linear-gradient(top, #f7f6f5 0%, #eee 100%);
+  background-image: linear-gradient(top, #f7f6f5 0%, #eee 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #aaa;
+  text-shadow: 0px 1px #fff;
+}
+a {
+  color: #444;
+  text-decoration: none;
+  text-shadow: 0px 1px #fff;
+}
+a:hover {
+  color: #222;
+}
+#new-todo-wrapper {
+  margin-top: 20px;
+  overflow: hidden;
+}
+input[type='text'] {
+  float: left;
+  margin-right: 2%;
+  padding: 7px 8px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  width: 73%;
+  font-size: 14px;
+}
+input[type='text']:focus {
+  outline: none;
+  border: 1px solid #888;
+  -webkit-box-shadow: 0px 1px 2px #ccc;
+  box-shadow: 0px 1px 2px #ccc;
+}
+.button {
+  width: 25%;
+  float: left;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81ad45), color-stop(1, #749b3d));
+  background-image: -webkit-linear-gradient(top, #81ad45 0%, #749b3d 100%);
+  background-image: linear-gradient(top, #81ad45 0%, #749b3d 100%);
+  -webkit-box-shadow: inset 0px 1px 0px #9ac164;
+  box-shadow: inset 0px 1px 0px #9ac164;
+  border: 1px solid #668936;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 7px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 0px 2px #668936;
+  color: #fff;
+  cursor: pointer;
+}
+.button:hover {
+  -webkit-box-shadow: 0px 2px 3px #ddd, inset 0px 1px 0px #b1d088;
+  box-shadow: 0px 2px 3px #ddd, inset 0px 1px 0px #b1d088;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #9ac164), color-stop(1, #81ad45));
+  background-image: -webkit-linear-gradient(top, #9ac164 0%, #81ad45 100%);
+  background-image: linear-gradient(top, #9ac164 0%, #81ad45 100%);
+}
+#todo-list {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+#todo-list li {
+  padding: 10px 20px 10px;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0px 1px 0px #fff;
+  box-shadow: 0px 1px 0px #fff;
+  cursor: pointer;
+}
+#todo-list li:hover {
+  background-color: #eee;
+  -webkit-box-shadow: inset 0px 0px 3px #d9d9d9, 0px 1px 0px #fff;
+  box-shadow: inset 0px 0px 3px #d9d9d9, 0px 1px 0px #fff;
+}
+#todo-list li input[type='checkbox'] {
+  cursor: pointer;
+  width: 28px;
+  height: 13px;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  overflow: hidden;
+}
+#todo-list li label {
+  cursor: pointer;
+  display: block;
+  padding-left: 25px;
+  text-indent: -30px;
+}
+
+@media screen and (max-width: 500px) {
+  .content{
+    width: 100%;
+  }
+  #todo-submit,
+  #new-todo {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  #todo-submit {
+    margin-top: 10px;
+  }
+}
+html {overflow-y: auto;}
+
+/* scrollbar formatting */
+::-webkit-scrollbar {
+  width: 12px;
+  }
+
+::-webkit-scrollbar-track {
+  background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+  }
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(left, #f7f6f5, #aaa);
+  border: 1px solid #ffffff;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  }

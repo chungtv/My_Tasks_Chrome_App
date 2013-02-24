@@ -1,0 +1,18 @@
+{
+   "manifest_version": 2,
+   "name": "My Tasks",
+   "description": "Simple Task Manager App for Chrome with Sync",
+   "offline_enabled": true,
+   "permissions": ["storage" ],
+   "version": "0.3",
+   "icons": {
+      "128": "data/128.png",
+      "16": "data/16.png",
+      "48": "data/48.png"
+   },
+   "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
