@@ -4,8 +4,7 @@
    "description": "Simple Task Manager App for Chrome with Sync",
    "offline_enabled": true,
    "permissions": ["storage" ],
-   "version": "0.31",
-   "homepage_url": "http://blog.arpitnext.com/my-tasks-chrome",
+   "version": "0.32",
    "icons": {
       "128": "data/128.png",
       "16": "data/16.png",
